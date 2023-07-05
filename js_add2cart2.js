@@ -1,4 +1,31 @@
 // JS for adding2cart
+
+// Get all "افزودن به سبد خرید" buttons
+const addToCartButtons = document.querySelectorAll('.product .btn');
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', addToCart);
+});
+
+// adding2cart
+function addToCart(event) {
+  //Preventing to auto-add
+  event.preventDefault();
+
+  // Get the product details
+  const product = event.target.parentNode;
+  const productName = product.querySelector('h3').textContent;
+  const productPrice = product.querySelector('p').textContent;
+
+  // Create an object with the product details
+  const item = {
+    name: productName,
+    price: productPrice
+  };
+
+  // Add2the cart
+  addToCartFunction(item);
+}
+
 function addToCartFunction(item) {
 
     // Check whether CART exists or not
@@ -11,29 +38,7 @@ function addToCartFunction(item) {
       // parse the JSON string to an array
       cart = JSON.parse(cart);
     }
-
-    // Get all "افزودن به سبد خرید" buttons
-  const addToCartButtons = document.querySelectorAll('.product .btn');
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', addToCart);
-  });
-    
-    function addToCart(event) {
-
-      //Preventing to auto-add
-      event.preventDefault();
-    
-      // Get the product details
-      const product = event.target.parentNode;
-      const productName = product.querySelector('h3').textContent;
-      const productPrice = product.querySelector('p').textContent;
-    
-      // Create an object with the product details
-      const item = {
-        name: productName,
-        price: productPrice
-      };
-      
+  
     // Check whether ITEM already exists or not
     var existingItem = cart.find(function(cartItem) {
       return cartItem.name === item.name;
@@ -54,7 +59,4 @@ function addToCartFunction(item) {
   }
   
   
-    // Add2the cart
-    addToCartFunction(item);
-  }
   
