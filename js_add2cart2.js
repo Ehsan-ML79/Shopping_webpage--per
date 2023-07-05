@@ -19,6 +19,8 @@ function addToCartFunction(item) {
   });
     
     function addToCart(event) {
+
+      //Preventing to auto-add
       event.preventDefault();
     
       // Get the product details

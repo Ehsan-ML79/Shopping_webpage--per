@@ -12,6 +12,7 @@ addToCartButtons.forEach(button => {
 
 // Handle adding item2cart
 function addToCart(event) {
+  //Preventing to auto-add
   event.preventDefault();
 
   // Product details
