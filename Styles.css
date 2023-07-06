@@ -350,3 +350,224 @@ section#product-info {
   margin-bottom: 20px;
   text-align: justify;
 }
+/* CSS for the cart page */
+
+/* Main section */
+#cart-items {
+  margin: 20px;
+}
+
+/* Heading */
+#cart-items h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Cart list */
+#cart-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* List item */
+#cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Item name */
+#cart-list li span:first-child {
+  flex-grow: 1;
+}
+
+/* Item price */
+#cart-list li span:last-child {
+  margin-left: 10px;
+}
+
+/* Quantity wrapper */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Quantity buttons */
+.quantity-wrapper button {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Remove button */
+#cart-list li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Total price */
+#total-price {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Purchase button */
+#purchase-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Increase and decrease buttons */
+.quantity-wrapper button:hover,
+#purchase-button:hover {
+  background-color: #0056b3;
+}
+/* CSS for the cart page */
+
+/* Main section */
+#cart-items {
+  margin: 20px;
+}
+
+/* Heading */
+#cart-items h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Cart list */
+#cart-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* List item */
+#cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Item name */
+#cart-list li span:first-child {
+  flex-grow: 1;
+}
+
+/* Item price */
+#cart-list li span:last-child {
+  margin-left: 10px;
+}
+
+/* Quantity wrapper */
+.quantity-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Quantity input */
+.quantity-wrapper input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Quantity buttons container */
+.quantity-buttons {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show quantity buttons on hover */
+.quantity-wrapper:hover .quantity-buttons {
+  opacity: 1;
+}
+
+/* Quantity buttons */
+.quantity-buttons button {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Remove button */
+#cart-list li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Total price */
+#total-price {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Purchase button */
+#purchase-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Increase and decrease buttons */
+.quantity-buttons button:hover,
+#purchase-button:hover {
+  background-color: #0056b3;
+}
+
+/* Increase and decrease buttons container */
+.quantity-buttons {
+  display: none;
+}
+
+/* Show quantity buttons when quantity input is focused or hovered */
+.quantity-wrapper input[type="number"]:focus + .quantity-buttons,
+.quantity-wrapper:hover .quantity-buttons {
+  display: flex;
+}
+
+/* Make the quantity box writable */
+.quantity-wrapper input[type="number"] {
+  pointer-events: auto;
+  background-color: #fff;
+}

@@ -99,11 +99,27 @@ function displayCartItems() {
       var quantityWrapper = document.createElement('div');
       quantityWrapper.className = 'quantity-wrapper';
 
+      var quantityElement = document.createElement('input');
+      quantityElement.type = 'number';
+      quantityElement.className = 'quantity';
+      quantityElement.value = item.quantity;
+      quantityElement.addEventListener('input', function() {
+        var quantity = parseInt(this.value);
+        if (!isNaN(quantity) && quantity >= 0) {
+          item.quantity = quantity;
+          localStorage.setItem('cart', JSON.stringify(cart));
+          displayTotalPrice();
+        }
+      });
+
+      var quantityButtons = document.createElement('div');
+      quantityButtons.className = 'quantity-buttons';
+
       const decreaseButton = document.createElement('button');
       decreaseButton.textContent = '-';
       decreaseButton.addEventListener('click', function() {
         
-        var quantityElement = this.nextElementSibling;
+        //var quantityElement = this.nextElementSibling;
         var quantity = parseInt(quantityElement.textContent);
         if (quantity > 1) {
           quantityElement.textContent = quantity - 1;
@@ -113,21 +129,32 @@ function displayCartItems() {
         }
       });
 
-      var quantityElement = document.createElement('span');
-      quantityElement.className = 'quantity';
-      quantityElement.textContent = item.quantity;
+      // var quantityElement = document.createElement('span');
+      // quantityElement.className = 'quantity';
+      // quantityElement.textContent = item.quantity;
 
       const increaseButton = document.createElement('button');
       increaseButton.textContent = '+';
       increaseButton.addEventListener('click', function() {
         
-        var quantityElement = this.previousElementSibling;
+        //var quantityElement = this.previousElementSibling;
         var quantity = parseInt(quantityElement.textContent);
         quantityElement.textContent = quantity + 1;
         item.quantity = quantity + 1;
         localStorage.setItem('cart', JSON.stringify(cart));
         displayTotalPrice(); // Update
       });
+
+      // Append the quantity buttons to the quantityButtons container
+        quantityButtons.appendChild(decreaseButton);
+        quantityButtons.appendChild(increaseButton);
+
+        // Append the quantity input and quantity buttons to the quantityWrapper
+        quantityWrapper.appendChild(quantityElement);
+        quantityWrapper.appendChild(quantityButtons);
+
+        // Append the quantityWrapper to the listItem
+        listItem.appendChild(quantityWrapper);
 
       var removeButton = document.createElement('button');
       removeButton.textContent = 'حذف';
