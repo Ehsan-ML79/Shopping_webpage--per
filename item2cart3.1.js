@@ -1,16 +1,16 @@
 "use strict";
 
-// Initializing the cart data from local storage or creating an empty array
+// Initializing data or creating an empty array
 var cart = JSON.parse(localStorage.getItem('cart')) || [];
 var cartList = document.getElementById('cart-list');// Getting the cart list element
 var totalPriceElement = document.getElementById('total-price-value');// Getting the total price element
 var purchaseButton = document.getElementById('purchase-button');// Getting the purchase button element
-var addToCartButtons = document.querySelectorAll('.product .btn');// All "افزودن به سبد خرید"
+//var addToCartButtons = document.querySelectorAll('.product .btn');// All "افزودن به سبد خرید"
 
 // Adding to the "افزودن به سبد خرید" buttons
-addToCartButtons.forEach(function(button) {
-  button.addEventListener('click', addToCart);
-});
+// addToCartButtons.forEach(function(button) {
+//   button.addEventListener('click', addToCart);
+// });
 
 //Handle adding items2cart
 function addToCart(event) {
@@ -54,10 +54,11 @@ function displayCartItems() {
   cartList.innerHTML = '';// Clearing the cart list
 
   cart.forEach(function(item) {
+    // If invalid reset quantity
     if (!item.quantity || isNaN(item.quantity) || item.quantity <= 0) {
       item.quantity = 1;
     }
-
+    // searching for the first li element has a data-name attribute matching the current item
     var existingItem = cartList.querySelector(`li[data-name="${item.name}"]`);
 
     if (existingItem) {
@@ -65,7 +66,7 @@ function displayCartItems() {
     } 
     else {
       var listItem = document.createElement('li');
-      listItem.dataset.name = item.name;
+      listItem.dataset.name = item.name;//dataset version
 
       var itemName = document.createElement('span');
       itemName.textContent = item.name;

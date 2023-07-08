@@ -12,7 +12,7 @@ function addToCart(event) {
   event.preventDefault();
 
   // Get the product details
-  const product = event.target.parentNode;
+  const product = event.target.parentNode;//Retrieve the parent element of the clicked button
   const productName = product.querySelector('h3').textContent;
   const productPrice = product.querySelector('p').textContent;
 
@@ -22,7 +22,7 @@ function addToCart(event) {
     price: productPrice
   };
 
-  // Add2the cart
+  // Add2cart
   addToCartFunction(item);
 }
 
