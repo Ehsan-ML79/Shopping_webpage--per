@@ -465,7 +465,7 @@ section#product-info {
   display: none;
 }
 
-/* Show quantity buttons when quantity input is focused or hovered */
+/* Show quantity buttons when quantity input is changing */
 .quantity-wrapper input[type="number"]:focus + .quantity-buttons,
 .quantity-wrapper:hover .quantity-buttons {
   display: flex;
