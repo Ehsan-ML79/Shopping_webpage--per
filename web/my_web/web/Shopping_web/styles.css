@@ -1,0 +1,478 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+header {
+  background-color: #800080;
+  padding: 20px;
+}
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #FF69B4;
+}
+
+#banner {
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+}
+#banner h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #FF69B4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#banner p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #FFD700;
+  color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.btn:hover {
+  background-color: #FFA500;
+}
+
+#featured-products {
+  padding: 20px;
+}
+#featured-products h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #800080;
+}
+
+.slider {
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  height: 350px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.product {
+  display: inline-block;
+  width: 200px;
+  height: 350px;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #ccc;
+}
+.slider-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+.slider-button {
+  background-color: #FFD700;
+  color: #000000;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+.slider-button:hover {
+  background-color: #FFA500;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  background-color: #ccc;
+}
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+
+footer {
+  background-color: #800080;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+#customer-reviews {
+  padding: 20px;
+}
+#customer-reviews h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #800080;
+}
+.slider2 {
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  height: 130px;
+}
+.review {
+  display: inline-block;
+  width: 300px;
+  height: 80px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: 20px;
+}
+.review-content {
+  text-align: center;
+}
+.quote {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.author {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+}
+
+#newsletter {
+  text-align: center;
+  padding: 20px;
+}
+#newsletter h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #800080;
+}
+#newsletter input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: 1px solid #800080;
+}
+#newsletter button.btn {
+  display: inline-block;
+  background-color: #FFD700;
+  color: #000000;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#newsletter button.btn:hover {
+  background-color: #FFA500;
+}
+
+#about {
+  text-align: justify;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  padding: 10px 20px;
+}
+#about h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555555;
+  padding: 10px 20px;
+}
+#about p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 20px;
+}
+
+#contact {
+  text-align: justify;
+  padding: 10px 20px;
+}
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #800080;
+  padding: 10px 20px;
+}
+#contact p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+  padding: 10px 20px;
+}
+.contact-details p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #000000;
+  padding: 10px 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #000000;
+  padding: 10px 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: 1px solid #800080;
+  color: #000000;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  background-color: #FFD700;
+  color: #000000;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #FFA500;
+}
+
+#blogs {
+  text-align: justify;
+  padding: 20px;
+}
+#blogs h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #800080;
+}
+.blog-post {
+  margin-bottom: 40px;
+}
+.blog-post h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+.blog-post p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.author {
+  font-style: italic;
+}
+.date {
+  font-weight: bold;
+}
+
+section#product-info {
+  padding: 20px;
+  display: flex;
+}
+.product-details {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px;
+}
+.product-details img {
+  width: 300px;
+  height: auto;
+}
+.product-details h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #800080;
+}
+.product-details p {
+  margin: 5px 0;
+  text-align: justify;
+}
+.product-reviews h3 {
+  font-size: 20px;
+  color: #800080;
+  padding: 25px;
+}
+.review2 {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* CSS for the cart page */
+
+/* Main section */
+#cart-items {
+  margin: 20px;
+}
+
+/* Heading */
+#cart-items h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#cart-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Item name */
+#cart-list li span:first-child {
+  flex-grow: 1;
+}
+
+/* Item price */
+#cart-list li span:last-child {
+  margin-left: 10px;
+}
+
+.quantity-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Quantity input */
+.quantity-wrapper input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Quantity buttons container */
+.quantity-buttons {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show quantity buttons on hover */
+.quantity-wrapper:hover .quantity-buttons {
+  opacity: 1;
+}
+
+/* Quantity buttons */
+.quantity-buttons button {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Remove button */
+#cart-list li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#total-price {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#purchase-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Increase and decrease buttons */
+.quantity-buttons button:hover,
+#purchase-button:hover {
+  background-color: #0056b3;
+}
+
+/* Increase and decrease buttons container */
+.quantity-buttons {
+  display: none;
+}
+
+/* Show quantity buttons when quantity input is changing */
+.quantity-wrapper input[type="number"]:focus + .quantity-buttons,
+.quantity-wrapper:hover .quantity-buttons {
+  display: flex;
+}
+
+/* Make the quantity box writable */
+.quantity-wrapper input[type="number"] {
+  pointer-events: auto;
+  background-color: #fff;
+}
